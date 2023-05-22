@@ -8,16 +8,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>I am Krish</title>
 </head>
+  <style>
+    body{
+      background-color:black;
+      color:whitesmoke;
+    }
+    #container{
+      text-align:center;
+      margin-bottom:20px;
+    }
+  </style>
 <body>
 
   <div class="container ">
-    <img src="/static/krish.jpg" class="p-5 img-fluid rounded-circle" height="300px" width ="300px" >
-    <h3>Hello!!</h3>
-    <h4>I am {{name}}</h4>
-    <h6>Frontend developer | Fresher </h6>
+    <img src="/static/krish.jpg" class=" m-5 5 img-fluid rounded-circle rounded mx-auto d-block" height="150px" width ="150px" >
+    <h3 class="text-center p-2">Hello!!</h3>
+    <h4  class="text-center p-1">I am {{name}}</h4>
+    <h6  class="text-center p-2">{{position}} | {{type}} </h6>
     <p>ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in </p>
-    <button class="btn btn-outline-primary">explore</button>
-    <h2>Intern</h2>
+    <div id="container"><button class="btn btn-outline-primary">explore</button>
+    </div>
+    <h2 class="text-center p-2">Internship</h2>
     <p>Advance concepts of frontend development and Web designing Training at National Small Scale industry Guindy, Chennai</p>
   </div>
 </body>
