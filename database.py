@@ -1,9 +1,9 @@
 from sqlalchemy import create_engine, text
 import os
 
-db_connection_string = os.environ['DB_CONNECTION_STRING']
+my_secret = os.environ['DB_CONNECTION_STRING']
 
-engine = create_engine(db_connection_string,
+engine = create_engine(my_secret,
                        connect_args={"ssl": {
                          "ssl_ca": "/etc/ssl/cert.pem"
                        }})
@@ -17,5 +17,8 @@ def load_db():
     projects = []
     for row in result_all:
       projects.append(dict(zip(column_names, row)))
-    print(projects)
-  return projects
+      print(projects)
+      return projects
+
+
+#   return projects
