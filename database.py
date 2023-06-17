@@ -1,11 +1,13 @@
 from sqlalchemy import create_engine, text
+import os
 
-db_connection_string = "mysql+pymysql://8s70frx4jeuismncvjv5:pscale_pw_C9GvO6xe6pBsDlsR8NsdHAEqLhvvAixSlgLOQtY6X08@aws.connect.psdb.cloud/krish-portfolio-v2?charset=utf8mb4"
+db_connection_string = os.environ['DB_CONNECTION_STRING']
 
 engine = create_engine(db_connection_string,
                        connect_args={"ssl": {
                          "ssl_ca": "/etc/ssl/cert.pem"
                        }})
+
 
 def load_db():
   with engine.connect() as conn:
