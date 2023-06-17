@@ -6,10 +6,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-  projects =load_db()
-  return render_template("home.html", projects=projects, name='krish')
-
-
+  projects = load_db()
+  return render_template("home.html",
+                         projects=projects,
+                         name='krish',
+                         position='front-end developer')
 
 
 app.run(host="0.0.0.0", debug=True)

@@ -18,7 +18,7 @@ def load_db():
     for row in result_all:
       projects.append(dict(zip(column_names, row)))
       print(projects)
-      return projects
+    return projects
 
 
 #   return projects
